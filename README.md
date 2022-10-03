@@ -1,13 +1,13 @@
 # DentalCoworking
 
-# Idea de negocio
+## Idea de negocio
 
 Aplicación web en la que se ofertan clinicas dentales que dispongan
 de gabinetes para ser alquilados a dentistas, higienista etc para trabajar, docencia.
 
 Una clinica tiene varios gabinetes que pueden estar disponibles o no.
 
-# Condiciones
+## Condiciones
 
 El arrendatario deberá ser autonomo.
 Ser odontólogo/estomatólogo colegiado en España.
@@ -15,7 +15,7 @@ Tener un seguro de responsabilidad profesional vigente.
 Tener permiso de trabajo para ejercer la odontología en caso de ser extranjero.
 
 
-# Entidades
+## Entidades
 
 1. Clinicas
 2. Gabinetes (cirugia e implantes, odontologia-general)
