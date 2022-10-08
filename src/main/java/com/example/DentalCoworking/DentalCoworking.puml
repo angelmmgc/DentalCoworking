@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Clinics{
+    -Long id
+    -String name;
+    -String email;
+
+    +getId()
+    +setId()
+    +geName()
+    +setName()
+    +getEmail()
+    +setEmail()
+}
+Clinics "1.*" - "1.1" Cabinetes
+
+
+class Cabinetes
+{
+    -idCabinete
+    -cirugia
+    -general
+
+    +getIdCabiente()
+     +setIdCabiente()
+    +getCirugia()
+    +setCirugia()
+    +getGeneral()
+    +setGeneral()
+
+
+}
+
+class Customer
+
+class Services
+
+
+
+@enduml
