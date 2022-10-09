@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "gabinetes")
+@Table(name = "gabinetes_libres")
 public class Cabinete implements Serializable {
 
     /**
@@ -15,27 +15,27 @@ public class Cabinete implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "cabinet type")
-    private String cabinetType;
-    @Column(nullable = false,name = "condition")
+    @Column(name = "type")
+    private String type;
+    @Column(name = "condition")
     private boolean condition;
 
+
+
     //constructores
-
-
     public Cabinete() {
     }
 
-    public Cabinete(Long id, String cabinetType, boolean condition) {
+    public Cabinete(Long id, String type, boolean condition) {
         this.id = id;
-        this.cabinetType = cabinetType;
+        this.type = type;
         this.condition = condition;
     }
 
     //asociaciones
 
-    //getter y setter
 
+    //getter y setter
 
     public Long getId() {
         return id;
@@ -45,12 +45,12 @@ public class Cabinete implements Serializable {
         this.id = id;
     }
 
-    public String getCabinetType() {
-        return cabinetType;
+    public String gettype() {
+        return type;
     }
 
-    public void setCabinetType(String cabinetType) {
-        this.cabinetType = cabinetType;
+    public void settype(String type) {
+        this.type = type;
     }
 
     public boolean isCondition() {
@@ -67,7 +67,7 @@ public class Cabinete implements Serializable {
     public String toString() {
         return "Gabinete{" +
                 "id=" + id +
-                ", cabinetType='" + cabinetType + '\'' +
+                ", type='" + type + '\'' +
                 ", condition=" + condition +
                 '}';
     }
