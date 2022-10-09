@@ -1,9 +1,10 @@
 package com.example.DentalCoworking.entities;
 
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "clinics")
@@ -23,10 +24,13 @@ public class Clinic implements Serializable {
     private String phone;
     @Column(nullable = false,unique = true)
     private String email;
-    @Column(name = "cabinets available")
+    @Column(name = "cabinets_available")
     private int cabinetsAvailable;
 
     //asociaciones : OneToOne, OneToMany, ManyToOne, ManyToMany
+    //obtengo una lista de gabinetes libres.consultaremos siempre desde aqui para sacar los gabinetes libres
+    @OneToMany
+    private List<Cabinete> cabinete = new ArrayList<>();//la inicializamos vacia para no tener una excepion
 
     //Gabinetes
 
@@ -47,8 +51,6 @@ public class Clinic implements Serializable {
     }
 
     //getter y setter
-
-
     public Long getId() {
         return id;
     }
@@ -87,6 +89,14 @@ public class Clinic implements Serializable {
 
     public void setNumGabinetes(int numGabinetes) {
         this.cabinetsAvailable = numGabinetes;
+    }
+
+    public List<Cabinete> getCabinete() {
+        return cabinete;
+    }
+
+    public void setCabinete(List<Cabinete> cabinete) {
+        this.cabinete = cabinete;
     }
 
     //toString
